@@ -119,7 +119,7 @@ var manifest = await sfClient.Cluster.GetClusterManifestAsync();
 var health = await sfClient.Cluster.GetClusterHealthAsync();
 
 // upload, provision and create application
-await sfClient.Applications.UploadApplicationPackageAsync("Path_To_Application_Package", applicationPackagePathInImageStore:"TestApp");
+await sfClient.ImageStore.UploadApplicationPackageAsync("Path_To_Application_Package", applicationPackagePathInImageStore:"TestApp");
 
 await sfClient.ApplicationTypes.ProvisionApplicationTypeAsync(new ProvisionApplicationTypeDescription("TestApp"));
 
